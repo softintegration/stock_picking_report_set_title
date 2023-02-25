@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template inherit_id="stock.report_delivery_document" id="report_delivery_document_inherited">
+        <xpath expr="//span[@t-field='o.name']" position="before">
+            <t t-if="o.picking_type_id.report_title">
+                <span t-field="o.picking_type_id.report_title"/> N°
+            </t>
+        </xpath>
+    </template>
+
+</odoo>
